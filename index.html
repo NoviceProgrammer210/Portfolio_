@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            border: 19px solid rgb(230, 6, 6);
+            height: 400px;
+            background-color: black;
+            border-radius: 20px;
+        }
+
+        .flex *{
+            border: 2px solid black;
+            padding: 20px;
+            background-color: aliceblue;
+            font-weight: bold;
+            border-radius: 20px;
+        }
+        .flex *:hover{
+            background-color: aqua;
+            color: blue;
+            cursor: pointer;
+        }
+        .flex .s2{
+            align-self: flex-start;
+        
+        }
+        .flex .s1{
+            align-self: flex-end;
+        }
+        .flex .s3{
+            align-self: flex-start;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex">
+        <div class="s1" id="s1">1</div>
+        <div class="s2" id="s2">2</div>
+        <div class="s3" id="s3">3</div>
+    </div>
+</body>
+<script>
+    const b1 = document.getElementById("s1");
+    const b2 = document.getElementById("s2");
+    const b3 = document.getElementById("s3");
+
+    b1.addEventListener('mouseover',()=>{
+        b1.style.alignSelf ="flex-start";
+    })
+
+    b2.addEventListener('mouseover',()=>{
+        b2.style.alignSelf ="flex-end";
+    })
+    b3.addEventListener('mouseover',()=>{
+        b3.style.alignSelf ="flex-end";
+    })
+
+    b1.addEventListener('mouseleave',()=>{
+        b1.style.alignSelf="flex-end";
+    })
+b2.addEventListener('mouseleave',()=>{
+        b2.style.alignSelf="flex-start";
+    })
+    b3.addEventListener('mouseleave',()=>{
+        b3.style.alignSelf="flex-start";
+    })
+</script>
+</html>
